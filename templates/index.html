@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Incident impact Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h2>Incident impact Analysis</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predic')}}"method="post">
+    	<input type="text" name="number" placeholder="number" required="required" />
+        <label for="active">Active Status:</label>
+        <select name="active" id="active">
+            <option value="1">1</option>
+            <option value="0">0</option>
+        </select><br><br>
+		<input type="text" name="contact_type" placeholder="contact_type" required="required" />
+        <label for="made_sla">SLA Status:</label>
+        <select name="made_sla" id="made_sla">
+            <option value="1">1</option>
+            <option value="0">0</option>
+        </select> <br><br>
+        <label for="knowledge">knowledge:</label>
+        <select name="knowledge" id="knowledge">
+            <option value="1">1</option>
+            <option value="0">0</option>
+        </select><br><br>
+        <input type="text" name="u_symptom" placeholder="u_symptom" required="required" />
+        <input type="text" name="priority" placeholder="priority" required="required" />
+        <input type="text" name="subcategory" placeholder="subcategory" required="required" />
+        <input type="text" name="incident_state" placeholder="incident_state" required="required" />
+        <input type="text" name="impact" placeholder="impact" required="required" />
+        <input type="text" name="category" placeholder="category" required="required" />
+        <input type="text" name="reopen_count" placeholder="reopen_count" required="required" />
+      <input type="text" name="opened_at_day" placeholder="opened_at_day" required="required" />
+        <input type="text" name="opened_at_month" placeholder="opened_at_month" required="required" />
+        <input type="text" name="opened_at_year" placeholder="opened_at_year" required="required" />
+        <input type="text" name="opened_at_hour" placeholder="opened_at_hour" required="required" />
+        <input type="text" name="opened_at_minute" placeholder="opened_at_minute" required="required" />
+       <!--  <input type="text" name="closed_at_day" placeholder="closed_at_day" required="required" />
+        <input type="text" name="closed_at_month" placeholder="closed_at_month" required="required" />
+        <input type="text" name="closed_at_yea" placeholder="closed_at_yea" required="required" />
+        <input type="text" name="closed_at_hour" placeholder="closed_at_hour" required="required" />
+        <input type="text" name="closed_at_minute" placeholder="closed_at_minute" required="required" />
+        --> 
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   {{ predict_txt }}
+
+ </div>
+
+
+</body>
+</html>

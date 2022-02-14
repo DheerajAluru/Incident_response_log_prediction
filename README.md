@@ -59,4 +59,5 @@ identifier of the problem associated with the incident<br>
 change_request<br>
 identifier of the change request associated with the incident<br>
 
-https://www.youtube.com/watch?v=jJgwEp1Lyj4
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/jJgwEp1Lyj4/0.jpg)](https://www.youtube.com/watch?v=jJgwEp1Lyj4 "Demo")
+

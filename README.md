@@ -1,4 +1,4 @@
-# Incident_response_log_prediction
+# Incident response log prediction
 This is an event log of an incident management process extracted from data gathered from the audit system of an instance of the ServiceNowTM platform used by an IT company.<br>
 About the Dataset:
 This dataset is taken from below kaggle repository <br>
